@@ -5,13 +5,12 @@ export function useMockSession() {
     return useSession();
   else
     return {
-    data: null,
-      // data: {
-      //   user: {
-      //     name: 'nagy135',
-      //     email: 'test@test.sk',
-      //     image: 'https://avatars.githubusercontent.com/u/11056512?v=4',
-      //   }
-      // }, status: 'authenticated'
+      data: {
+        user: {
+          name: 'nagy135',
+          email: 'test@test.sk',
+          image: 'https://avatars.githubusercontent.com/u/11056512?v=4',
+        }
+      }, status: 'authenticated'
     };
 }
