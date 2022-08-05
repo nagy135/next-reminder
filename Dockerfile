@@ -11,6 +11,8 @@ COPY yarn.lock /usr/src/app
 # Production use node instead of root
 # USER node
 
+RUN yarn config set ignore-engines true
+
 RUN yarn
 
 RUN yarn global add prisma next
