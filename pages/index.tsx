@@ -2,11 +2,12 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Login from "../components/login";
 import styles from "../styles/Home.module.css";
-import { useSession } from "next-auth/react";
 import App from "../components/app";
+import { useMockSession } from "../hooks/session-mock";
+import Layout from "../components/layout";
 
 const Home: NextPage = () => {
-  const { data: session } = useSession();
+  const { data: session } = useMockSession();
   return (
     <div className={styles.container}>
       <Head>
@@ -15,8 +16,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>{!session ? <Login /> : <App />}</main>
-
+      <main className={styles.main}>
+        <Layout>{!session ? <Login /> : <App />}</Layout>
+      </main>
       <footer className={styles.footer}></footer>
     </div>
   );
