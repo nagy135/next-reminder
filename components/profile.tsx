@@ -1,4 +1,4 @@
-import { signIn, signOut } from "next-auth/react";
+import { signOut } from "next-auth/react";
 import { useMockSession } from "../hooks/session-mock";
 import Image from "next/image";
 
