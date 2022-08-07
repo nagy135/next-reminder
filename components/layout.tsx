@@ -1,11 +1,15 @@
 import Head from "next/head";
 import React from "react";
+import { useMockSession } from "../hooks/session-mock";
+import Login from "./login";
+import styles from "../styles/Home.module.css";
 
 interface ILayout {
   children?: JSX.Element;
 }
 
 const Layout: React.FC<ILayout> = ({ children }) => {
+  const { data: session } = useMockSession();
   return (
     <div>
       <Head>
@@ -15,14 +19,14 @@ const Layout: React.FC<ILayout> = ({ children }) => {
           type="text/css"
         />
         <script src="https://cdn.tailwindcss.com" defer></script>
-        <title>Next-Typer</title>
+        <title>Reminder</title>
         <meta
           name="description"
-          content="Simple app calculating typing speed"
+          content="Reminds you about stuff you forget!"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>{children}</main>
+      <main className={styles.main}>{!session ? <Login /> : children}</main>
     </div>
   );
 };

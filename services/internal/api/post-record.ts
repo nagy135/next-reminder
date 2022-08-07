@@ -2,8 +2,6 @@ import { TPostRecordRequest } from "@ctypes/request";
 import { TPostRecordResponse } from "@ctypes/response";
 
 /**
- *  calls api to generate new game, refreshes page
- *
  * @author Viktor Nagy <viktor.nagy@01people.com>
  */
 export default async (
