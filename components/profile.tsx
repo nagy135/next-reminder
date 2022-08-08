@@ -6,7 +6,7 @@ export default function Profile() {
   const { data: session } = useMockSession();
   if (session) {
     return (
-      <div className="fixed flex flex-col top-0 right-0">
+      <div className="flex flex-col mb-4">
         {session.user?.image ? (
           <Image
             src={session.user.image}
