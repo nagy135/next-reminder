@@ -30,7 +30,7 @@ const AddRecord: NextPage = () => {
 
   return (
     <Layout>
-      <div className="container">
+      <div className="container max-w-2xl">
         <div className="form-control w-full max-w-xs mx-auto">
           <label className="label">
             <span className="label-text">Name</span>
@@ -77,9 +77,11 @@ const AddRecord: NextPage = () => {
             className="input input-bordered w-full max-w-xs"
           />
         </div>
+          <div className="flex justify-center mt-2">
         <button onClick={handleCreateNewRecord} className="btn btn-primary">
           Create
         </button>
+        </div>
       </div>
     </Layout>
   );
