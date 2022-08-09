@@ -17,6 +17,8 @@ RUN yarn
 
 RUN yarn global add prisma next
 
+RUN prisma migrate dev
+
 RUN prisma generate
 
 EXPOSE 3000
