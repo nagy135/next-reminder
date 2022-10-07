@@ -23,6 +23,13 @@ services:
     env_file: ./env/.env.app
     stdin_open: true
 
+  # CRON
+  cron:
+    build:
+      context: ./containers/cron/
+      dockerfile: ./Dockerfile
+    stdin_open: true
+
 volumes:
   reminder-database:
     name: reminder-database

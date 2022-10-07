@@ -17,9 +17,10 @@ RUN yarn
 
 RUN yarn global add prisma next
 
-RUN prisma migrate dev
 
-RUN prisma generate
+# RUN prisma generate
+
+# RUN prisma migrate dev
 
 EXPOSE 3000
 CMD [ "yarn", "dev" ]

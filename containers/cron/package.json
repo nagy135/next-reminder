@@ -1,0 +1,13 @@
+{
+  "name": "cron-service",
+  "version": "0.0.1",
+  "description": "Cron container",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^1.1.2",
+    "node-cron": "^3.0.2"
+  }
+}
