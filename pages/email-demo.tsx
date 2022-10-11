@@ -8,7 +8,6 @@ const EmailDemo: NextPage = () => {
   const [subject, setSubject] = useState("test subject");
   const [body, setBody] = useState("<p>test<strong>TEST</strong></p>");
   const sendEmail = async () => {
-    console.log('lul');
     SendEmail({
       to: recipient,
       subject,
