@@ -8,3 +8,9 @@ export type TPostRecordRequest = {
   email: string;
   deadline: string;
 };
+
+export type TSendDemoEmailRequest = {
+  to: string;
+  subject: string;
+  body: string;
+};
