@@ -16,33 +16,6 @@ export default function RecordList() {
   }, []);
   return (
     <div className="max-w-3xl t-2">
-      {records.map((record, i) => (
-        <>
-          <div
-            tabIndex={i}
-            key={`collapse-item-${i}`}
-            className="collapse border border-base-300 bg-base-100 rounded-box my-1"
-          >
-            <div className="collapse-title text-xl font-medium">
-              {record.name}
-            </div>
-            <div className="collapse-content">
-              <p>{record.description}</p>
-              <p>{record.deadline}</p>
-              <p>{record.notified}</p>
-              <p>
-                <input
-                  type="checkbox"
-                  checked={record.notified}
-                  readOnly={true}
-                  className="checkbox"
-                />
-              </p>
-            </div>
-          </div>
-          <hr />
-        </>
-      ))}
       <div className="flex justify-center mt-2">
         <button
           onClick={() => router.push("/add")}
@@ -51,6 +24,30 @@ export default function RecordList() {
           Add record
         </button>
       </div>
+      {records.map((record, i) => (
+        <div
+          tabIndex={i}
+          key={`collapse-item-${i}`}
+          className="collapse border border-gray-600 bg-base-100 rounded-box my-1"
+        >
+          <div className="collapse-title text-xl font-medium">
+            <p>{record.name}</p>
+            <p>{dateStringToPrettyDate(record.deadline)}</p>
+          </div>
+          <div className="collapse-content">
+            <p>{record.description}</p>
+            <p>{record.notified}</p>
+            <p>
+              <input
+                type="checkbox"
+                checked={record.notified}
+                readOnly={true}
+                className="checkbox"
+              />
+            </p>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
