@@ -12,6 +12,7 @@
     "@prisma/client": "4.1.1",
     "@tanstack/react-query": "^4.10.3",
     "daisyui": "^2.22.0",
+    "dayjs": "^1.11.5",
     "next": "12.2.4",
     "next-auth": "^4.10.3",
     "nodemailer": "^6.8.0",
