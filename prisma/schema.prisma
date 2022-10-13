@@ -19,7 +19,7 @@ model Record {
     userEmail   String @db.VarChar(255)
 
     deadline    DateTime
-    notified    Boolean @default(false)
+    notified    DateTime?
 
     createdAt   DateTime @default(now())
     updatedAt   DateTime @updatedAt

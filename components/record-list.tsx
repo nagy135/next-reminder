@@ -32,8 +32,8 @@ export default function RecordList() {
               <div
                 tabIndex={i}
                 key={`collapse-item-${i}`}
-                className={`collapse border ${
-                  passed ? "border-red-400" : "border-orange-400"
+                className={`collapse border-2 ${
+                  passed ? "border-red-600 border" : "border-orange-400"
                 }  bg-base-100 rounded-box my-1 pt-2`}
               >
                 <div className="collapse-title text-xl font-medium">
